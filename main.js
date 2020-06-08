@@ -2,17 +2,62 @@
  * YOUR CODE HERE! *
  *******************/
 
-function yell(){}
-
-  function getFirstCharacter(){}
-  function getLastCharacter(){}
-  function getOneCharacter(){}
-  function getTwoCharacters(){}
-  function makeCapitalized(){}
-  function yellLouder(){}
-  function getInitials(){}
+function yell(str){
+  return str + "!";
+}
+console.log(yell("You"));
 
 
+  function getFirstCharacter(str){
+    return str[0];
+  }
+  console.log(getFirstCharacter("Hello"));
+
+  function getLastCharacter(str){
+    return str.charAt(str.length-1);
+  }
+  console.log(getLastCharacter("abcdefg"));
+  
+
+  function getOneCharacter(str,num){
+    return str[num];
+  }
+  console.log(getOneCharacter('goood',2));
+  
+
+  function getTwoCharacters(str,numOne,numTwo){
+    return str[numOne] + str[numTwo];
+  
+  }
+  console.log(getTwoCharacters('I want a bagel!', 2, 11));
+  
+
+
+  function makeCapitalized(str){
+    return str.toUpperCase();
+  }
+  console.log(makeCapitalized("word"));
+
+
+  function yellLouder(str){
+    return str.toUpperCase() +"!!!";
+  }
+console.log(yellLouder("hello"));
+
+
+
+  
+function getInitials(str){
+  const ary = str.split(" ");
+  const firstWord = ary[0];
+  let lastWord = firstWord;
+  if(ary.length > 1 ){
+    lastWord = ary[1];
+  }
+  return firstWord[0] + "." + lastWord[0] + ".";
+}
+
+console.log(getInitials("Cat Dog Mouse"));
 
 
 
